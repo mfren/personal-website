@@ -1,4 +1,4 @@
-
+"use client";
 
 const socials = [
     {
@@ -24,7 +24,7 @@ const socials = [
 export function About() {
 
     return (
-        <div className="container pt-20 pb-20">
+        <div id="about" className="container pt-20 pb-20">
             <div className="flex flex-col sm:flex-row mx-auto">
                 <div className="basis-1/3 p-10">
                     <img src="/images/profile.jpg" alt="Matt French" className="rounded-full h-40 mx-auto" />
@@ -38,10 +38,10 @@ export function About() {
             </div>
             <br />
             <div className="flex flex-row flex-wrap justify-evenly gap-3">
-                {socials.map((social) => (
-                    <a className="flex flex-row items-center h-5 gap-1" href={social.link} target="_blank" rel="noopener noreferrer">
-                        <img src={social.icon} alt="LinkedIn" className="max-h-full" />
-                        <a className="font-extralight">{social.displayName}</a>
+                {socials.map((social, index) => (
+                    <a className="flex flex-row items-center h-5 gap-1" href={social.link} target="_blank" rel="noopener noreferrer" key={index}>
+                        <img src={social.icon} alt={social.name} className="max-h-full" />
+                        <p className="font-extralight hidden sm:block">{social.displayName}</p>
                     </a>
                 ))}
             </div>
