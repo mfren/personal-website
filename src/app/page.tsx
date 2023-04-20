@@ -1,5 +1,6 @@
 import About from "@/components/Home/About";
 import Hero from "@/components/Home/Hero";
+import Skills from "@/components/Home/Skills";
 import React from "react";
 
 export default function HomePage() {
@@ -7,6 +8,7 @@ export default function HomePage() {
         <div>
             <Hero />
             <About />
+            <Skills />
         </div>
     )
 }
