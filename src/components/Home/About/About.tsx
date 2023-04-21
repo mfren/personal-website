@@ -1,22 +1,28 @@
 "use client";
 
+import profilePic from "../../../assets/images/profile.jpg";
+import linkedInLogo from "../../../assets/images/linkedin.svg";
+import githubLogo from "../../../assets/images/github.svg";
+import emailLogo from "../../../assets/images/email.svg";
+import Image from "next/image";
+
 const socials = [
     {
         name: "LinkedIn",
         displayName: "matthewfrench019",
-        icon: "/svgs/linkedin.svg",
+        icon: linkedInLogo,
         link: "https://www.linkedin.com/in/matthewfrench019/",
     },
     {
         name: "GitHub",
         displayName: "MattAdamFrench",
-        icon: "/svgs/github.svg",
+        icon: githubLogo,
         link: "https://github.com/MattAdamFrench",
     },
     {
         name: "Email",
         displayName: "matt.adam.french@gmail.com",
-        icon: "/svgs/email.svg",
+        icon: emailLogo,
         link: "mailto:matt.adam.french@gmail.com",
     }
 ]
@@ -27,7 +33,7 @@ export function About() {
         <div id="about" className="container pt-20 pb-20">
             <div className="flex flex-col sm:flex-row mx-auto">
                 <div className="basis-1/3 p-10">
-                    <img src="/images/profile.jpg" alt="Matt French" className="rounded-full h-40 mx-auto" />
+                    <Image src={profilePic} alt="Matt French" className="rounded-full h-40 mx-auto" />
                 </div>
                 <div className="basis-2/3 flex flex-col justify-center">
                     <h3 className="font-semibold text-3xl">About Me</h3>
@@ -40,7 +46,7 @@ export function About() {
             <div className="flex flex-row flex-wrap justify-evenly gap-3">
                 {socials.map((social, index) => (
                     <a className="flex flex-row items-center h-5 gap-1" href={social.link} target="_blank" rel="noopener noreferrer" key={index}>
-                        <img src={social.icon} alt={social.name} className="max-h-full" />
+                        <Image src={social.icon} alt={social.name} className="max-h-full" />
                         <p className="font-extralight hidden sm:block">{social.displayName}</p>
                     </a>
                 ))}
