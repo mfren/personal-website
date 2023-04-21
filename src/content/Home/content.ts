@@ -17,7 +17,7 @@ export const experience = [
         company: "KolmTech Ltd",
         position: "Founder",
         start: new Date("2022-12-01"),
-        end: new Date(),
+        end: null,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
         type: TimelineType.Work
     },

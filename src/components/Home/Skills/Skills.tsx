@@ -1,31 +1,5 @@
+import { skills } from "@/content/Home/content"
 
-
-const skills = {
-    "Languages": [
-        "JavaScript",
-        "TypeScript",
-        "Python",
-        "Java",
-        "C#",
-    ],
-    "Frameworks": [
-        "React",
-        "Next.js",
-    ],
-    "Databases": [
-        "MongoDB",
-        "MySQL",
-        "PostgreSQL",
-        "SQL Server",
-    ],
-    "Tools": [
-        "Git/GitHub",
-        "Docker",
-        "Vercel",
-        "AWS",
-        "Azure",
-    ],
-}
 
 export function Skills() {
 
