@@ -1,9 +1,9 @@
 "use client";
 
-import profilePic from "../../../assets/images/profile.jpg";
-import linkedInLogo from "../../../assets/images/linkedin.svg";
-import githubLogo from "../../../assets/images/github.svg";
-import emailLogo from "../../../assets/images/email.svg";
+import profilePic from "../../../../public/images/profile.jpg";
+import linkedInLogo from "../../../../public/svgs/linkedin.svg";
+import githubLogo from "../../../../public/svgs/github.svg";
+import emailLogo from "../../../../public/svgs/email.svg";
 import Image from "next/image";
 
 const socials = [
@@ -46,7 +46,7 @@ export function About() {
             <div className="flex flex-row flex-wrap justify-evenly gap-3">
                 {socials.map((social, index) => (
                     <a className="flex flex-row items-center h-5 gap-1" href={social.link} target="_blank" rel="noopener noreferrer" key={index}>
-                        <Image src={social.icon} alt={social.name} className="max-h-full" />
+                        <Image src={social.icon} alt={social.name} width="20" className="max-h-full" />
                         <p className="font-extralight hidden sm:block">{social.displayName}</p>
                     </a>
                 ))}
