@@ -4,14 +4,14 @@ import pythonLogo from "../../public/svgs/python.svg";
 import javaLogo from "../../public/svgs/java.svg";
 import csharpLogo from "../../public/svgs/csharp.svg";
 
-type Skill = {
+export type Skill = {
     name: string,
     logo: any,
     type: SkillType,
     description: string,
 } 
 
-enum SkillType {
+export enum SkillType {
     Language, Framework, Library, Database, Other
 }
 
