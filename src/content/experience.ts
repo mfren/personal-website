@@ -1,4 +1,4 @@
-import { CSharp, JavaScript, Python, Skill, TypeScript } from "./skills";
+import { AspDotNet, Azure, CSharp, JavaScript, Python, Skill, TypeScript } from "./skills";
 
 export type Experience = {
     organization: string;
@@ -21,7 +21,7 @@ export const SpringboardIT: Experience = {
     end: new Date("2022-12-01"),
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
     type: ExperienceType.Work,
-    skills: [JavaScript, CSharp, Python]
+    skills: [JavaScript, CSharp, Azure, Python, TypeScript, AspDotNet]
 }
 
 export const KolmTech: Experience = {

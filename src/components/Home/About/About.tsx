@@ -30,14 +30,14 @@ const socials = [
 export function About() {
 
     return (
-        <div id="about" className="container pt-20 pb-20">
+        <div id="about" className="container max-w-screen-md pt-20 pb-20">
             <div className="flex flex-col sm:flex-row mx-auto">
                 <div className="basis-1/3 p-10">
                     <Image src={profilePic} alt="Matt French" className="rounded-full h-40 mx-auto" priority/>
                 </div>
                 <div className="basis-2/3 flex flex-col justify-center">
                     <h3 className="font-semibold text-3xl">About Me</h3>
-                    <p className="font-light">
+                    <p className="font-light dark:text-slate-300">
                         I am a software developer with a passion for learning and creating. I have a background in web development and am currently learning mobile development. I am currently working as a software developer at <a href="https://www.3dmd.com/" className="text-blue-500">3DMD</a> where I am working on a variety of projects including a web application for managing and tracking medical devices, a mobile application for managing and tracking medical devices, and a web application for managing and tracking medical device repairs.
                     </p>
                 </div>

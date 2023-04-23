@@ -3,7 +3,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image"
 import { Fragment, useState } from "react"
-import { SKILLS } from "@/content/skills";
+import { SKILLS, SkillType } from "@/content/skills";
 
 function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: string, logo?: string, children?: any }) {
     return (
@@ -67,13 +67,13 @@ function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: 
 
 
 
-function SkillBox(props: { skill: string, twColor: string, description: string, logo?: string }) {
+function SkillBox(props: { skill: string, description: string, logo?: string }) {
 
     const [showModal, setShowModal] = useState(false)
 
     return (
         <>
-            <div onClick={() => setShowModal(true)} className={`flex flex-row gap-2 items-center pt-1 pb-1 pl-1 pr-4 border rounded bg-white border-white drop-shadow-md hover:drop-shadow-xl hover:cursor-pointer`}>
+            <div onClick={() => setShowModal(true)} className="flex flex-row gap-2 items-center pt-1 pb-1 pl-1 pr-4 rounded bg-white dark:bg-slate-800 drop-shadow-md hover:drop-shadow-xl hover:cursor-pointer">
                 {props.logo &&
                     <Image src={props.logo} alt={props.skill} width={20} className="h-8 w-8 mx-auto" />
                 }
@@ -94,13 +94,19 @@ function SkillBox(props: { skill: string, twColor: string, description: string, 
 export function Skills() {
 
     return (
-        <div className="w-full bg-gray-700">
-            <div id="skills" className="container pt-20 pb-20">
+        <div className="w-full bg-slate-700 dark:bg-slate-900">
+            <div id="skills" className="container max-w-screen-md pt-20 pb-20">
                 <h3 className="text-gray-100 font-semibold text-5xl text-center mb-3">Skills</h3>
 
                 <div className="flex flex-row flex-wrap justify-center gap-4">
-                    {SKILLS.map((skill, index) => (
-                        <SkillBox skill={skill.name} twColor="pink" logo={skill.logo} description={skill.description} key={index} />
+                    {SKILLS.filter(s => s.type === SkillType.Language).map((skill, index) => (
+                        <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
+                    ))}
+                </div>
+                <hr/>
+                <div className="flex flex-row flex-wrap justify-center gap-4">
+                    {SKILLS.filter(s => s.type !== SkillType.Language).map((skill, index) => (
+                        <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
                     ))}
                 </div>
             </div>
