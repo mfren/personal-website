@@ -1,7 +1,6 @@
 import { HomePageSection } from "@/components/HomePageSection";
 import { EXPERIENCE, Experience } from "@/content/experience"
 import { Skill } from "@/content/skills";
-import Image from "next/image"
 
 const ordering = (a: Experience, b: Experience) => {
     if (a.start > b.start) {
@@ -30,7 +29,6 @@ function SkillChip(props: { skill: Skill }) {
 
 function ExperienceSection(props: { experience: Experience }) {
 
-
     let dateText;
     if (props.experience.end) {
         dateText = `${dateFormatter.format(props.experience.start)} – ${dateFormatter.format(props.experience.end)}`
@@ -42,7 +40,7 @@ function ExperienceSection(props: { experience: Experience }) {
         <div className="flex flex-col mx-auto">
             <h4 className="font-light text-xl"><span className="font-medium">{props.experience.organization} &#183;</span> {props.experience.position}</h4>
             <div className="flex flex-row gap-2 pt-1 pb-1">
-                <p className="mr-5 font-light">{dateText}</p>
+                <p className="mr-5 font-light min-w-fit">{dateText}</p>
                 {props.experience.skills.map((skill, index) => (
                     <SkillChip skill={skill} key={index} />
                 ))}
