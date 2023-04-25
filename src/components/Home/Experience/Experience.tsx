@@ -19,8 +19,9 @@ function SkillChip(props: { skill: Skill }) {
 
     return (
         <div className="max-h-fit flex flex-row gap-2 items-center pl-2 pr-3 pt-1 pb-1 border rounded-full border-slate-300 bg-slate-100 dark:bg-slate-800 dark:border-slate-600">
-            {props.skill.logo &&
-                <Image src={props.skill.logo} alt={props.skill.name} width={15} className="" />
+            {props.skill.logoFont &&
+                // <Image src={props.skill.logo} alt={props.skill.name} width={15} className="" />
+                <p className="font-extralight text-xs text-center select-none">{props.skill.logoFont}</p>
             }
             <p className="font-extralight text-xs text-center select-none">{props.skill.name}</p>
         </div>

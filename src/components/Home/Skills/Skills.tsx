@@ -3,10 +3,10 @@
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image"
 import { Fragment, useState } from "react"
-import { SKILLS, SkillType } from "@/content/skills";
+import { SKILLS, Skill, SkillType } from "@/content/skills";
 import { HomePageSection } from "@/components/HomePageSection";
 
-function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: string, logo?: string, children?: any }) {
+function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: Skill, children?: any }) {
     return (
         <Transition appear show={props.showModal} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={() => props.setShowModal(false)}>
@@ -68,25 +68,22 @@ function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: 
 
 
 
-function SkillBox(props: { skill: string, description: string, logo?: string }) {
+function SkillBox(props: { skill: Skill }) {
 
     const [showModal, setShowModal] = useState(false)
 
     return (
         <>
             <div onClick={() => setShowModal(true)} className="flex flex-row gap-2 items-center pt-1 pb-1 pl-1 pr-4 rounded bg-white dark:bg-slate-800 drop-shadow-md hover:drop-shadow-xl hover:cursor-pointer">
-                {props.logo &&
-                    <Image src={props.logo} alt={props.skill} width={20} className="h-8 w-8 mx-auto" />
-                }
-                <p className="font-light text-center select-none">{props.skill}</p>
+                <i className={`${props.skill.logoFont} colored text-2xl`} />
+                <p className="font-light text-center select-none">{props.skill.name}</p>
             </div>
             <SkillModal 
                 showModal={showModal} 
                 setShowModal={setShowModal}
                 skill={props.skill} 
-                logo={props.logo}
             >
-                <p className="text-gray-500 text-sm">{props.description}</p>
+                <p className="text-gray-500 text-sm">{props.skill.description}</p>
             </SkillModal>
         </>
     )
@@ -98,13 +95,13 @@ export function Skills() {
         <HomePageSection id="skills" title="Skills" dark>
             <div className="flex flex-row flex-wrap justify-center gap-4">
                 {SKILLS.filter(s => s.type === SkillType.Language).map((skill, index) => (
-                    <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
+                    <SkillBox skill={skill} key={index} />
                 ))}
             </div>
-            <hr/>
+            <hr className="mt-5 mb-5"/>
             <div className="flex flex-row flex-wrap justify-center gap-4">
                 {SKILLS.filter(s => s.type !== SkillType.Language).map((skill, index) => (
-                    <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
+                    <SkillBox skill={skill} key={index} />
                 ))}
             </div>
         </HomePageSection>
