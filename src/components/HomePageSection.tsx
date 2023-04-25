@@ -2,7 +2,7 @@
 
 export function HomePageSection(props: { id: string, title?: string, dark?: any, children: React.ReactNode }) {
 
-    let containerBg = props.dark ? "bg-slate-700 dark:bg-slate-950" : "bg-slate-100 dark:bg-slate-800"
+    let containerBg = props.dark ? "bg-homepage-dark" : "bg-homepage-light"
     let titleColor = props.dark ? "text-gray-100" : "text-gray-900"
 
     return (

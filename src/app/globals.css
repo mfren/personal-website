@@ -3,25 +3,58 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.custom-shape-divider-bottom-1682432707 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1682432707 svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 80px;
+}
+
+.custom-shape-divider-bottom-1682432707 .shape-fill {
+    fill: #FFFFFF;
+}
+
+@layer base {
+    .bg-homepage-light {
+        @apply bg-slate-100 dark:bg-black;
+    }
+    .bg-homepage-dark {
+        @apply bg-slate-700 dark:bg-slate-950;
+    }
+    .fill-homepage-light {
+        @apply fill-slate-100 dark:fill-black;
+    }
+    .fill-homepage-dark {
+        @apply fill-slate-700 dark:fill-slate-950;
+    }
 }
