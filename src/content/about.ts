@@ -1,0 +1,2 @@
+
+export const ABOUT = "Highly motivated developer, with a desire to improve my skills in every area of software engineering. I’ve always tried to step out of my comfort zone to push the boundaries of my abilities, and I’m not one for following the usual route. My creative approach to programming has allowed me to excel in all the positions I’ve held, regularly becoming a valued source of advice.";

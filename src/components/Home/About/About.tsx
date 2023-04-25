@@ -6,6 +6,7 @@ import githubLogo from "../../../../public/svgs/github.svg";
 import emailLogo from "../../../../public/svgs/email.svg";
 import Image from "next/image";
 import { HomePageSection } from "@/components/HomePageSection";
+import { ABOUT } from "@/content/about";
 
 const socials = [
     {
@@ -39,7 +40,7 @@ export function About() {
                 <div className="basis-2/3 flex flex-col justify-center">
                     <h3 className="font-semibold text-3xl">About Me</h3>
                     <p className="font-light dark:text-slate-300">
-                        I am a software developer with a passion for learning and creating. I have a background in web development and am currently learning mobile development. I am currently working as a software developer at <a href="https://www.3dmd.com/" className="text-blue-500">3DMD</a> where I am working on a variety of projects including a web application for managing and tracking medical devices, a mobile application for managing and tracking medical devices, and a web application for managing and tracking medical device repairs.
+                        {ABOUT}
                     </p>
                 </div>
             </div>
