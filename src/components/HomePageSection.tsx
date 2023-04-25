@@ -3,7 +3,7 @@
 export function HomePageSection(props: { id: string, title?: string, dark?: any, children: React.ReactNode }) {
 
     let containerBg = props.dark ? "bg-homepage-dark" : "bg-homepage-light"
-    let titleColor = props.dark ? "text-gray-100" : "text-gray-900"
+    let titleColor = props.dark ? "text-gray-100 dark:text-gray-100" : "text-gray-900 dark:text-gray-100"
 
     return (
         <div className={`w-full ${containerBg}`}>

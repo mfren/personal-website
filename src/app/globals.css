@@ -46,15 +46,15 @@ body {
 
 @layer base {
     .bg-homepage-light {
-        @apply bg-slate-100 dark:bg-black;
+        @apply bg-slate-100 dark:bg-slate-800;
     }
     .bg-homepage-dark {
-        @apply bg-slate-700 dark:bg-slate-950;
+        @apply bg-slate-700 dark:bg-slate-900;
     }
     .fill-homepage-light {
-        @apply fill-slate-100 dark:fill-black;
+        @apply fill-slate-100 dark:fill-slate-800;
     }
     .fill-homepage-dark {
-        @apply fill-slate-700 dark:fill-slate-950;
+        @apply fill-slate-700 dark:fill-slate-900;
     }
 }
