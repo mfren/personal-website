@@ -35,12 +35,12 @@ function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: 
                         >
                             <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                 <div className="flex flex-row flex-nowrap justify-start items-center gap-2">
-                                    {props.logo && <Image src={props.logo} alt={props.skill} width={20} className="h-8 w-8" />}
+                                    {props.skill.logoFont && <i className={`${props.skill.logoFont}`} />}
                                     <Dialog.Title
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        {props.skill}
+                                        {props.skill.name}
                                     </Dialog.Title>
                                     <button
                                         type="button"
