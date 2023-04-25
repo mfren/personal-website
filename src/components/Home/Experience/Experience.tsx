@@ -1,3 +1,4 @@
+import { HomePageSection } from "@/components/HomePageSection";
 import { EXPERIENCE, Experience } from "@/content/experience"
 import { Skill } from "@/content/skills";
 import Image from "next/image"
@@ -53,16 +54,12 @@ function ExperienceSection(props: { experience: Experience }) {
 export function Experience() {
 
     return (
-        <div>
-            <div id="experience" className="container max-w-screen-md pt-20 pb-20">
-                <h3 className="font-semibold text-5xl text-center mb-3">Experience</h3>
-
-                <div className="flex flex-col gap-8">
-                    {EXPERIENCE.sort(ordering).map((experience, index) => (
-                        <ExperienceSection experience={experience} key={index} />
-                    ))}
-                </div>
+        <HomePageSection id="experience" title="Experience">
+            <div className="flex flex-col gap-8">
+                {EXPERIENCE.sort(ordering).map((experience, index) => (
+                    <ExperienceSection experience={experience} key={index} />
+                ))}
             </div>
-        </div>
+        </HomePageSection>
     )
 }

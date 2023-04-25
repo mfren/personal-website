@@ -4,6 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image"
 import { Fragment, useState } from "react"
 import { SKILLS, SkillType } from "@/content/skills";
+import { HomePageSection } from "@/components/HomePageSection";
 
 function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: string, logo?: string, children?: any }) {
     return (
@@ -94,22 +95,18 @@ function SkillBox(props: { skill: string, description: string, logo?: string }) 
 export function Skills() {
 
     return (
-        <div className="w-full bg-slate-700 dark:bg-slate-900">
-            <div id="skills" className="container max-w-screen-md pt-20 pb-20">
-                <h3 className="text-gray-100 font-semibold text-5xl text-center mb-3">Skills</h3>
-
-                <div className="flex flex-row flex-wrap justify-center gap-4">
-                    {SKILLS.filter(s => s.type === SkillType.Language).map((skill, index) => (
-                        <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
-                    ))}
-                </div>
-                <hr/>
-                <div className="flex flex-row flex-wrap justify-center gap-4">
-                    {SKILLS.filter(s => s.type !== SkillType.Language).map((skill, index) => (
-                        <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
-                    ))}
-                </div>
+        <HomePageSection id="skills" title="Skills" dark>
+            <div className="flex flex-row flex-wrap justify-center gap-4">
+                {SKILLS.filter(s => s.type === SkillType.Language).map((skill, index) => (
+                    <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
+                ))}
             </div>
-        </div>
+            <hr/>
+            <div className="flex flex-row flex-wrap justify-center gap-4">
+                {SKILLS.filter(s => s.type !== SkillType.Language).map((skill, index) => (
+                    <SkillBox skill={skill.name} logo={skill.logo} description={skill.description} key={index} />
+                ))}
+            </div>
+        </HomePageSection>
     )
 }

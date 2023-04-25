@@ -5,6 +5,7 @@ import linkedInLogo from "../../../../public/svgs/linkedin.svg";
 import githubLogo from "../../../../public/svgs/github.svg";
 import emailLogo from "../../../../public/svgs/email.svg";
 import Image from "next/image";
+import { HomePageSection } from "@/components/HomePageSection";
 
 const socials = [
     {
@@ -30,7 +31,7 @@ const socials = [
 export function About() {
 
     return (
-        <div id="about" className="container max-w-screen-md pt-20 pb-20">
+        <HomePageSection id="about">
             <div className="flex flex-col sm:flex-row mx-auto">
                 <div className="basis-1/3 p-10">
                     <Image src={profilePic} alt="Matt French" className="rounded-full h-40 mx-auto" priority/>
@@ -51,6 +52,6 @@ export function About() {
                     </a>
                 ))}
             </div>
-        </div>
+        </HomePageSection>
     )
 }
