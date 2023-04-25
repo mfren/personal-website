@@ -1,15 +1,10 @@
 
-
-
 const bgStyles = {
     background: 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)',
     backgroundSize: '400% 400%',
-    // animation: 'gradient 15s ease infinite',
 }
 
 export function Hero() {
-
-
     return (
         <div className="relative">
             <div className="w-full pt-24 pb-32 flex flex-col justify-center animate-gradient" style={bgStyles}>
