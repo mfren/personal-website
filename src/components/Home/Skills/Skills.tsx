@@ -33,18 +33,18 @@ function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: 
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-homepage-light p-6 text-left align-middle shadow-xl transition-all">
                                 <div className="flex flex-row flex-nowrap justify-start items-center gap-2">
-                                    {props.skill.logoFont && <i className={`${props.skill.logoFont}`} />}
+                                    {props.skill.logoFont && <i className={`${props.skill.logoFont} colored`} />}
                                     <Dialog.Title
                                         as="h3"
-                                        className="text-lg font-medium leading-6 text-gray-900"
+                                        className="text-lg font-medium leading-6 text-homepage-light"
                                     >
                                         {props.skill.name}
                                     </Dialog.Title>
                                     <button
                                         type="button"
-                                        className="ml-auto bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none transition ease-in-out"
+                                        className="ml-auto bg-none rounded-md text-homepage-light hover:text-gray-500 focus:outline-none transition ease-in-out"
                                         onClick={() => props.setShowModal(false)}
                                     >
                                         <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

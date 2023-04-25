@@ -57,4 +57,10 @@ body {
     .fill-homepage-dark {
         @apply fill-slate-700 dark:fill-slate-900;
     }
+    .text-homepage-light {
+        @apply text-slate-900 dark:text-slate-100;
+    }
+    .text-homepage-dark {
+        @apply text-slate-900 dark:text-slate-100;
+    }
 }
