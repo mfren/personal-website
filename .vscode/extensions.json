@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "github.copilot",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint"
     ]
 }
