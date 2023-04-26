@@ -65,16 +65,13 @@ function SkillModal(props: { showModal: boolean, setShowModal: Function, skill: 
     )
 }
 
-
-
-
 function SkillBox(props: { skill: Skill }) {
 
     const [showModal, setShowModal] = useState(false)
 
     return (
         <>
-            <div onClick={() => setShowModal(true)} className="flex flex-row gap-2 items-center pt-1 pb-1 pl-1 pr-4 rounded bg-white dark:bg-slate-800 drop-shadow-md hover:drop-shadow-xl hover:cursor-pointer">
+            <div onClick={() => setShowModal(true)} className="flex flex-row gap-2 items-center pt-1 pb-1 pl-2 pr-4 rounded bg-white dark:bg-slate-800 drop-shadow-md hover:drop-shadow-xl hover:cursor-pointer">
                 <i className={`${props.skill.logoFont} colored text-2xl`} />
                 <p className="font-light text-center select-none">{props.skill.name}</p>
             </div>
