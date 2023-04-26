@@ -1,3 +1,5 @@
+"use client";
+
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, PropsWithChildren, useState } from "react"
 import { SKILLS, Skill, SkillType } from "@/content/skills";
