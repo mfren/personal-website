@@ -1,4 +1,4 @@
-import profilePic from "../../../public/images/profile.jpg";
+import profilePic from "../../../public/images/profile-512.jpg";
 import Image from "next/image";
 import { HomePageSection } from "@/components/HomePageSection";
 import { ABOUT } from "@/content/about";
