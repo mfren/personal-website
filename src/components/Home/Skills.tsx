@@ -74,13 +74,13 @@ function SkillBox(props: { skill: Skill }) {
                 <i className={`${props.skill.logoFont} colored text-2xl`} />
                 <p className="font-light text-center select-none">{props.skill.name}</p>
             </div>
-            <SkillModal 
+            {/* <SkillModal 
                 showModal={showModal} 
                 setShowModal={setShowModal}
                 skill={props.skill} 
             >
                 <p className="text-gray-500 text-sm">{props.skill.description}</p>
-            </SkillModal>
+            </SkillModal> */}
         </>
     )
 }
