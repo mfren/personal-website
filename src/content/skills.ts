@@ -1,8 +1,3 @@
-import javascriptLogo from "../../public/svgs/javascript.svg";
-import typescriptLogo from "../../public/svgs/typescript.svg";
-import pythonLogo from "../../public/svgs/python.svg";
-import javaLogo from "../../public/svgs/java.svg";
-import csharpLogo from "../../public/svgs/csharp.svg";
 
 export type Skill = {
     name: string,
