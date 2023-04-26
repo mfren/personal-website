@@ -37,9 +37,9 @@ function ExperienceSection(props: { experience: Experience }) {
         <div className="flex flex-col mx-auto">
             <h4 className="font-light text-xl"><span className="font-medium">{props.experience.organization} &#183;</span> {props.experience.position}</h4>
             
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col sm:flex-row gap-2 pt-1 pb-1">
                 <p className="mr-5 font-light min-w-fit">{dateText}</p>
-                <div className="flex flex-row flex-wrap gap-2 pt-1 pb-1">
+                <div className="flex flex-row flex-wrap gap-2">
                     {props.experience.skills.map((skill, index) => (
                         <SkillChip skill={skill} key={index} />
                     ))}
