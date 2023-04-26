@@ -8,8 +8,8 @@ export default function Hero() {
     return (
         <div className="relative">
             <div className="w-full pt-24 pb-32 flex flex-col justify-center animate-gradient" style={bgStyles}>
-                <h1 className="text-6xl font-bold text-center text-gray-50">Matt French</h1>
-                <h2 className="text-3xl font-semibold text-center text-gray-50">Software Developer</h2>
+                <h1 className="text-6xl font-bold text-center text-gray-50 pl-5 pr-5">Matt French</h1>
+                <h2 className="text-3xl font-semibold text-center text-gray-50 pl-5 pr-5">Software Developer</h2>
             </div>
             <div className="custom-shape-divider-bottom-1682432707">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
