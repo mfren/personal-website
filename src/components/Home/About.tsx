@@ -12,7 +12,7 @@ export default function About() {
         <HomePageSection id="about">
             <div className="flex flex-col sm:flex-row mx-auto">
                 <div className="basis-1/3 p-10">
-                    <Image src={profilePic} alt="Matt French" className="rounded-full h-40 mx-auto" priority/>
+                    <Image src={profilePic} alt="Matt French" className="rounded-full w-full max-w-[256px] mx-auto" priority/>
                 </div>
                 <div className="basis-2/3 flex flex-col justify-center">
                     <h3 className="font-semibold text-3xl">About Me</h3>
