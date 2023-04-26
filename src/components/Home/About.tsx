@@ -1,5 +1,3 @@
-"use client";
-
 import profilePic from "../../../public/images/profile.jpg";
 import Image from "next/image";
 import { HomePageSection } from "@/components/HomePageSection";
