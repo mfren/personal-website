@@ -57,7 +57,7 @@ export const React: Skill = {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem."
 }
 
-export const Go: Skill = {
+export const GoLang: Skill = {
     name: "Go",
     logoFont: "devicon-go-plain",
     type: SkillType.Language,
@@ -135,6 +135,6 @@ export const GitHub: Skill = {
 }
 
 export const SKILLS: Skill[] = [
-    JavaScript, TypeScript, Python, Java, CSharp, React, Go, RubyOnRails, AspDotNet, Azure, AWS,
+    JavaScript, TypeScript, Python, Java, CSharp, React, GoLang, RubyOnRails, AspDotNet, Azure, AWS,
     MySQL, PostgreSQL, SqlServer, Docker, Kubernetes, GitHub
 ];

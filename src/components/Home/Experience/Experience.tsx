@@ -45,7 +45,13 @@ function ExperienceSection(props: { experience: Experience }) {
                     <SkillChip skill={skill} key={index} />
                 ))}
             </div>
-            <p className="dark:text-slate-300">{props.experience.description}</p>
+            <ul className="list-disc list-outside ml-5 gap-5">
+                {props.experience.descItems?.map((desc, index) => (
+                    <li key={index} className="mb-1">
+                        <p className="font-light">{desc}</p>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }
