@@ -1,2 +1,6 @@
 
-export const ABOUT = "Highly motivated developer, with a desire to improve my skills in every area of software engineering. I’ve always tried to step out of my comfort zone to push the boundaries of my abilities, and I’m not one for following the usual route. My creative approach to programming has allowed me to excel in all the positions I’ve held, regularly becoming a valued source of advice.";
+export const ABOUT = `
+I'm a software engineer with a very wide range of skills & experience.
+I've worked on a variety of projects, from React SPAs to e-commerce backend systems to blockchain deployments. 
+Most recently I worked as a technical lead at a education startup, working closely with the CEO to balance technical and business requirements.
+I'm passionate about bringing a great experience to users and I'm always looking for new opportunities to learn and grow.`;
