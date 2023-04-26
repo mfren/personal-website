@@ -6,8 +6,8 @@ const bgStyles = {
 
 export default function Hero() {
     return (
-        <div className="relative">
-            <div className="w-full pt-24 pb-32 flex flex-col justify-center animate-gradient" style={bgStyles}>
+        <div className="relative -mt-32 pt-32 animate-gradient" style={bgStyles}>
+            <div className="w-full pt-24 pb-32 flex flex-col justify-center">
                 <h1 className="text-6xl font-bold text-center text-gray-50 pl-5 pr-5">Matt French</h1>
                 <h2 className="text-3xl font-semibold text-center text-gray-50 pl-5 pr-5">Software Developer</h2>
             </div>
