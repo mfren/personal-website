@@ -39,11 +39,14 @@ function ExperienceSection(props: { experience: Experience }) {
     return (
         <div className="flex flex-col mx-auto">
             <h4 className="font-light text-xl"><span className="font-medium">{props.experience.organization} &#183;</span> {props.experience.position}</h4>
-            <div className="flex flex-row gap-2 pt-1 pb-1">
+            
+            <div className="flex flex-col sm:flex-row gap-2">
                 <p className="mr-5 font-light min-w-fit">{dateText}</p>
-                {props.experience.skills.map((skill, index) => (
-                    <SkillChip skill={skill} key={index} />
-                ))}
+                <div className="flex flex-row flex-wrap gap-2 pt-1 pb-1">
+                    {props.experience.skills.map((skill, index) => (
+                        <SkillChip skill={skill} key={index} />
+                    ))}
+                </div>
             </div>
             <ul className="list-disc list-outside ml-5 gap-5">
                 {props.experience.descItems?.map((desc, index) => (
