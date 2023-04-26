@@ -89,7 +89,7 @@ function SkillBox(props: { skill: Skill }) {
     )
 }
 
-export function Skills() {
+export default function Skills() {
 
     return (
         <HomePageSection id="skills" title="Skills" dark>

@@ -59,7 +59,7 @@ function ExperienceSection(props: { experience: Experience }) {
     )
 }
 
-export function Experience() {
+export default function Experience() {
 
     return (
         <HomePageSection id="experience" title="Experience">

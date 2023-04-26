@@ -4,7 +4,7 @@ const bgStyles = {
     backgroundSize: '400% 400%',
 }
 
-export function Hero() {
+export default function Hero() {
     return (
         <div className="relative">
             <div className="w-full pt-24 pb-32 flex flex-col justify-center animate-gradient" style={bgStyles}>
