@@ -94,7 +94,7 @@ export default function Skills() {
                     <SkillBox skill={skill} key={index} />
                 ))}
             </div>
-            <hr className="mt-5 mb-5"/>
+            <hr className="mt-5 mb-5 border-slate-500 dark:border-slate-700"/>
             <div className="flex flex-row flex-wrap justify-center gap-4">
                 {SKILLS.filter(s => s.type !== SkillType.Language).map((skill, index) => (
                     <SkillBox skill={skill} key={index} />
