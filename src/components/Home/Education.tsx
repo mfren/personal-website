@@ -8,11 +8,11 @@ export default function Education() {
                     <h4 className="font-light text-xl text-homepage-dark"><span className="font-medium">University of Warwick &#183;</span> Computer Science, BSc</h4>
                     <p className="text-homepage-dark">September 2021 - March 2022</p>
                     <p className="font-light text-slate-300">
-                        I completed the first year of content my degree, averaging 87% in my modules, compared to a 65% cohort average.
+                        {`I completed the first year of content my degree, averaging 87% in my modules, compared to a 65% cohort average.
                         University never really suited me, and Warwick wasn't working, so I decided to take a gap year
                         with a view to returning to a different university.
                         During my year off, I've worked with some amazing companies, and even started my own, and I've
-                        come to the conclusion that I'm better suited in industry.
+                        come to the conclusion that I'm better suited in industry.`}
                     </p>
                 </div>
                 <div className="flex flex-col">
