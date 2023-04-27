@@ -10,7 +10,7 @@ export default function About() {
         <HomePageSection id="about">
             <div className="flex flex-col sm:flex-row mx-auto">
                 <div className="basis-1/3 p-10">
-                    <Image src={profilePic} alt="Matt French" className="rounded-full w-full max-w-[256px] mx-auto" priority/>
+                    <Image src={profilePic} alt="Matt French" width={256} height={256} className="rounded-full w-full max-w-[256px] mx-auto"/>
                 </div>
                 <div className="basis-2/3 flex flex-col justify-center">
                     <h3 className="font-semibold text-3xl">About Me</h3>
@@ -23,7 +23,7 @@ export default function About() {
             <div className="flex flex-row flex-wrap justify-evenly gap-3">
                 {SOCIALS.map((social, index) => (
                     <a className="flex flex-row items-center h-5 gap-1" href={social.url} target="_blank" rel="noopener noreferrer" key={index}>
-                        <Image src={social.logo} alt={social.name} width="20" className="max-h-full" />
+                        <Image src={social.logo} alt={social.name} width={20} height={20} className="max-h-full" />
                         <p className="font-extralight hidden sm:block">{social.username}</p>
                     </a>
                 ))}
