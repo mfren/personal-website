@@ -9,7 +9,7 @@ A key objective was keep achieve a quick load time, and to keep the website as l
 
 ## Where it's hosted
 Currently the website runs on Vercel and deployments are managed by the built-in CI/CD pipeline.
-You can view the website at [mattfrench.dev](https://mattfrench.net).
+You can view the website at [mattfrench.dev](https://mattfrench.dev).
 
 ## How it's structured
 The homepage is broken down into several sections, each being it's own component, and are found at `src/components/home`. 
