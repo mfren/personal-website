@@ -3,6 +3,45 @@ import './globals.css'
 export const metadata = {
     title: 'Matt French | Software Engineer',
     description: 'Information about Matt French, a software engineer based in Bristol, UK.',
+    authors: [{ name: "Matt French" }],
+    keywords: [
+        'Matt French',
+        'Software Engineer',
+        'Bristol',
+        'React',
+        'Next.js',
+        'TypeScript',
+        'JavaScript',
+        'Java',
+        'Python',
+        'C#',
+    ],
+    themeColor: [
+        { media: '(prefers-color-scheme: light)', color: 'white' },
+        { media: '(prefers-color-scheme: dark)', color: 'black' },
+    ],
+    // twitter: {
+    //     card: 'summary_large_image',
+    //     title: 'Matt French',
+    //     description: 'Software Engineer based in Bristol, UK.',
+    //     siteId: '1467726470533754880',
+    //     creator: '@nextjs',
+    //     creatorId: '1467726470533754880',
+    //     images: ['https://nextjs.org/og.png'],
+    // },
+    robots: {
+        index: false,
+        follow: true,
+        nocache: true,
+        googleBot: {
+            index: true,
+            follow: false,
+            noimageindex: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
 }
 
 export default function RootLayout({
